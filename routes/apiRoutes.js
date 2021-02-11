@@ -1,7 +1,7 @@
 const db = require("../models");
 
 module.exports = function(app) {
-    // App.get to pull up info for the workouts page
+    // Gets last workout
     app.get("/api/workouts", (req, res) => {
         db.Workout.find({}).then(dbWorkout => {
             res.json(dbWorkout);
